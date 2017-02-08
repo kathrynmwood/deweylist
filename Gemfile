@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # ruby version
-ruby '2.2.3'
+ruby '2.3.3'
 # Auth
 gem 'devise', '~> 4.2'
 gem 'toastr-rails', '~> 1.0', '>= 1.0.3'

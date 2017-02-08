@@ -15,3 +15,7 @@
 <% end %>
 
 <h3><%= @list.price %></h3>
+
+<% if can? :manage, User %>
+    <p><%= link_to "Delete List", list_path(@list.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<% end %>
