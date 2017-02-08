@@ -10,4 +10,13 @@ class ListsController < ApplicationController
         @list = List.find_by_id(params[:id])
     end
 
+    def new
+        @user = current_user
+        @list = List.new
+    end
+
+    def create
+
+    end
+
 end
