@@ -5,3 +5,7 @@
     <h3><%= list.organization %></h3>
     <p><%= list.description %></p>
 <% end %>
+
+<% if can? :manage, User %>
+    <p><%= link_to "Create New List", new_list_path %></p>
+<% end %>
