@@ -6,4 +6,12 @@
 
 <h2><%= @list.description %></h2>
 
+<h2>Books</h2>
+
+<% @list.books.each do |book| %>
+    <h3><%= book.title %></h3>
+    <h4><%= book.author %></h4>
+    <p><%= book.description %></p>
+<% end %>
+
 <h3><%= @list.price %></h3>
