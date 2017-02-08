@@ -1,12 +1,2 @@
 <h1>Dewey List</h1>
 <h2>Read for a Cause.</h2>
-
-<% if current_user.nil? %>
-    <%= link_to new_user_session_path, class: 'login-button' do %>
-        Login
-    <% end %>
-<% else %>
-    <%= link_to lists_path, class: 'login-button' do %>
-        Go to App
-    <% end %>
-<% end %>
