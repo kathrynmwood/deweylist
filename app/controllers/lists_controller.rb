@@ -16,7 +16,13 @@ class ListsController < ApplicationController
     end
 
     def create
+        @user = current_user
+        @list = @user.lists.build(list_params)
+    end
 
+    private
+    def list_params
+        params.require(:list).permit(:title, :description, :price, :organization, :organization_description, :organization_url, :image_url)
     end
 
 end
