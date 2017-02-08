@@ -1,0 +1,7 @@
+<h1>Book Lists</h1>
+
+<% @lists.each do |list| %>
+    <h2><%= link_to list.title, list_path(list) %></h2>
+    <h3><%= list.organization %></h3>
+    <p><%= list.description %></p>
+<% end %>
