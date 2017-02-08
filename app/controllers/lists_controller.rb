@@ -18,6 +18,11 @@ class ListsController < ApplicationController
     def create
         @user = current_user
         @list = @user.lists.build(list_params)
+        if @list.save
+            redirect_to @list
+        else
+            render 'new'
+        end
     end
 
     private
