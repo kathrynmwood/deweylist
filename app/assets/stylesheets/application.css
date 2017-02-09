@@ -14,3 +14,7 @@
  *= require_self
  *= require_toastr
  */
+
+nav {
+    background-color: #22b573;
+}

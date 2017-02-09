@@ -4,11 +4,15 @@
     <title>Deweylist</title>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+    <%= render 'layouts/nav' %>
+
     <% unless flash.empty? %>
         <script type="text/javascript">
             <% flash.each do |f| %>
