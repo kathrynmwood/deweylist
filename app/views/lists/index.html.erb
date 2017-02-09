@@ -1,11 +1,18 @@
-<h1>Book Lists</h1>
+<div class="container">
+    <h1>Book Lists</h1>
 
-<% @lists.each do |list| %>
-    <h2><%= link_to list.title, list_path(list) %></h2>
-    <h3><%= list.organization %></h3>
-    <p><%= list.description %></p>
-<% end %>
+    <div class="row">
+        <% @lists.each do |list| %>
+            <div class="col s12 m6 l4">
+                <h2><%= link_to list.title, list_path(list) %></h2>
+                <h3><%= list.organization %></h3>
+                <p><%= list.description %></p>
+            </div>
+        <% end %>
+    </div>
 
-<% if can? :manage, User %>
-    <p><%= link_to "Create New List", new_list_path %></p>
-<% end %>
+    <% if can? :manage, User %>
+        <p><%= link_to "Create New List", new_list_path, class: "waves-effect waves-light btn right" %></p>
+    <% end %>
+
+</div>
