@@ -1,5 +1,7 @@
 <h1><%= @list.title %></h1>
 
+<%= link_to "Subscribe", subscription_path(@list.id) %>
+
 <h2><%= @list.organization %></h2>
 <p><%= @list.organization_description %></p>
 <%= link_to @list.organization, @list.organization_url %>
