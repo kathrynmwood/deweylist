@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Deweylist</title>
-    <%= csrf_meta_tags %>
+<html lang="en">
+    <head>
+        <title><%= content_for?(:title) ? yield(:title) : "Dewey List" %></title>
+              
+        <%= csrf_meta_tags %>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      
   </head>
 
   <body>
+
+    <%= render 'layouts/nav' %>
+
     <% unless flash.empty? %>
         <script type="text/javascript">
             <% flash.each do |f| %>
@@ -17,16 +26,12 @@
             <% end %>
         </script>
     <% end %>
-
+    
     <%= yield %>
 
     <% if user_signed_in? %>
-        <%= link_to('Edit Registration', edit_user_registration_path) %>
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-    <% else %>
-        <%= link_to('Registration', new_user_registration_path) %>
-        <%= link_to('Login', new_user_session_path) %>
     <% end %>
 
-  </body>
+    </body>
 </html>
