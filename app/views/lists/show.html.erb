@@ -3,23 +3,29 @@
 
     <%= link_to "Subscribe", subscription_path(@list.id), class: "waves-effect waves-light btn right" %>
 
-    <h2><%= @list.organization %></h2>
-    <p><%= @list.organization_description %></p>
-    <%= link_to @list.organization, @list.organization_url %>
+    <h2>You'll love this list if...</h2>
+    <p><%= @list.description %></p>
 
-    <h2><%= @list.description %></h2>
+    <h2>Benefits
+        <%= @list.organization %></h2>
+    <p><%= @list.organization_description %></p>
+    <p>You can find more information here:
+        <%= link_to @list.organization, @list.organization_url %></p>
+
+    <h2>Price per Quarter: $<%= @list.price %></h2>
 
     <h2>Books</h2>
 
-    <div class="row library">
-    <% @list.books.each do |book| %>
-        <%= book.image_url %>
-    <% end %>
+    <div class="row">
+        <% @list.books.each do |book| %>
+        <div class="col s12 m6 l4">
+            <img src= "<%= book.image_url %>" class= "library">
+        </div>
+        <% end %>
     </div>
 
-    <h3><%= @list.price %></h3>
-
     <% if can? :manage, User %>
-        <p><%= link_to "Delete List", list_path(@list.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+    <%= link_to "Edit List", edit_list_path(@list.id), class: "btn right" %>
+    <%= link_to "Delete List", list_path(@list.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn right" %>
     <% end %>
 </div>
