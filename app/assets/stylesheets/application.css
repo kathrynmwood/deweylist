@@ -16,3 +16,15 @@
 
  *= require_toastr
  */
+
+nav {
+    background-color: #22b573;
+}
+
+a {
+    color: #22b573;
+}
+
+.btn {
+    background-color: #22b573;
+}
