@@ -1,0 +1,32 @@
+<div class="container">
+
+<h1>Edit Book List</h1>
+
+<%= form_for @list do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+
+    <%= f.label :organization %>
+    <%= f.text_field :organization %>
+
+    <%= f.label :organization_description %>
+    <%= f.text_area :organization_description %>
+
+    <%= f.label :organization_url %>
+    <%= f.text_field :organization_url %>
+
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+
+    <%= f.submit %>
+
+<% end %>
+
+</div>
