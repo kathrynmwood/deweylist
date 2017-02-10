@@ -2,35 +2,35 @@
 <html lang="en">
     <head>
         <title>Dewey List</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= csrf_meta_tags %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%= csrf_meta_tags %>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.css">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed" rel="stylesheet">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
-  </head>
+    </head>
 
-  <body>
+    <body>
 
-    <%= render 'layouts/nav' %>
+        <%= render 'layouts/nav' %>
 
-    <% unless flash.empty? %>
+        <% unless flash.empty? %>
         <script type="text/javascript">
             <% flash.each do |f| %>
             <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
-                toastr['<%= type %>']('<%= f[1] %>');
+            toastr['<%= type %>']('<%= f[1] %>');
             <% end %>
         </script>
-    <% end %>
+        <% end %>
 
-    <%= yield %>
+        <%= yield %>
 
-    <% if user_signed_in? %>
+        <% if user_signed_in? %>
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-    <% end %>
+        <% end %>
 
     </body>
 </html>
