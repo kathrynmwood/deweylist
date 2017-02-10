@@ -3,7 +3,7 @@
 
     <div class="row">
         <% @lists.each do |list| %>
-            <div class="col s12 m6 l4">
+            <div class="col s12 m6 l4 list-list">
                 <h2><%= link_to list.title, list_path(list) %></h2>
                 <h3><%= list.organization %></h3>
                 <p><%= list.description %></p>
