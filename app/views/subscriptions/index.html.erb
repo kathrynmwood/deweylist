@@ -1,4 +1,15 @@
 <div class= "container">
     <h1>Your Subscriptions</h1>
-    
+
+    <ul>
+        <% @subscription.each do |subscription| %>
+            <li>
+                <%= subscription.list.title %>
+                <%= subscription.id %>
+                <%= link_to "Unsubscribe", destroy_subscription_path(subscription.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn right" %>
+            </li>
+          </br>
+        <% end %>
+    </ul>
+
 </div>
