@@ -12,13 +12,15 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
-
  *= require_toastr
  */
 
 nav {
     background-color: #22b573;
+}
+
+nav img {
+    max-height: 40px;
 }
 
 a {
