@@ -2,22 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// body {
+//   background-image: url('http://i.imgur.com/PL1neEj.jpg');
+//   background-repeat: no-repeat;
+//   background-position: top;
+//   background-size: cover;
+// }
+
 .banner {
     margin-top: -30px;
     margin-bottom: -10px;
-    height: 500px;
+    height: 550px;
     align: center;
     background-image: url('http://i.imgur.com/PL1neEj.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    color: #ffffff;
 }
 
 .banner h1 {
-    font-family: "Lobster", serif;
+    font-family: "Pacifico", serif;
     text-align: center;
     padding-top: 30px;
-    font-size: 5em;
+    font-size: 7em;
 }
 
 .banner h2 {
