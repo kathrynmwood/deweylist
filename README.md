@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Deployed Site
+https://frozen-reaches-94450.herokuapp.com/
 
-Things you may want to cover:
+## Future Development Goals
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Create Book Show page
+* Make CRUD on lists specific to the curator who created the list
+* Add Book new & create functionality
+* Integrate Stripe
