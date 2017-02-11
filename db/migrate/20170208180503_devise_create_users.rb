@@ -44,6 +44,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
         u.email     = 'test@test.com'
         u.password  = 'password'
     end
-    
+
   end
 end
