@@ -16,5 +16,6 @@ class AddRolesToUsers < ActiveRecord::Migration[5.0]
         u.email        = 'curator@test.com'
         u.password     = 'password'
         u.curator_role = true
+    end
   end
 end
