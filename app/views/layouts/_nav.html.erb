@@ -1,16 +1,51 @@
 <nav>
     <div class="nav-wrapper">
-      <a href="<%= root_path %>" class="brand-logo center"><img src="http://i.imgur.com/NLDxFnM.png" alt="Dewey List Logo"></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <% if user_signed_in? %>
-            <li><a href="<%= lists_path %>">Lists</a></li>
-            <li><a href="<%= subscriptions_path %>">Subscriptions</a></li>
-            <li><a href="<%= edit_user_registration_path %>">Edit Profile</a></li>
+        <a href="<%= root_path %>" class="brand-logo center"><img src="http://i.imgur.com/NLDxFnM.png" alt="Dewey List Logo"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <% if user_signed_in? %>
+            <li>
+                <a href="<%= lists_path %>">Lists</a>
+            </li>
+            <li>
+                <a href="<%= subscriptions_path %>">Subscriptions</a>
+            </li>
+            <li>
+                <a href="<%= edit_user_registration_path %>">Edit Profile</a>
+            </li>
         <% else %>
-            <li><a href="<%= new_user_registration_path %>">Sign Up</a></li>
-            <li><a href="<%= new_user_session_path %>">Login</a></li>
+            <li>
+                <a href="<%= new_user_registration_path %>">Sign Up</a>
+            </li>
+            <li>
+                <a href="<%= new_user_session_path %>">Login</a>
+            </li>
             <!-- <li><a href="<%= lists_path %>">Lists</a></li> -->
-        <% end %>
-      </ul>
+            <% end %>
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+            <% if user_signed_in? %>
+            <li>
+                <a href="<%= lists_path %>">Lists</a>
+            </li>
+            <li>
+                <a href="<%= subscriptions_path %>">Subscriptions</a>
+            </li>
+            <li>
+                <a href="<%= edit_user_registration_path %>">Edit Profile</a>
+            </li>
+        <% else %>
+            <li>
+                <a href="<%= new_user_registration_path %>">Sign Up</a>
+            </li>
+            <li>
+                <a href="<%= new_user_session_path %>">Login</a>
+            </li>
+            <!-- <li><a href="<%= lists_path %>">Lists</a></li> -->
+            <% end %>
+        </ul>
     </div>
-  </nav>
+</nav>

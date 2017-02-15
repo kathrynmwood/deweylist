@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require_toastr
+
+$( document ).ready(function(){
+    $(".button-collapse").sideNav();
+})
