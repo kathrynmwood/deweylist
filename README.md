@@ -20,11 +20,11 @@ Users can create an account and log in. The user can then view a list of all boo
 
 ## Wireframe
 
-![Wireframe](IMG_6033.jpg)
+![Wireframe](./public/wireframe.jpg)
 
 ## ERD
 
-![ERD](IMG_6023.jpg)
+![ERD](./public/erd.jpg)
 
 ## Project Pitch
 
