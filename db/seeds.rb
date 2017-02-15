@@ -6,6 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Initialize test admin account
+User.create! do |u|
+    u.email       = 'admin@test.com'
+    u.password    = 'password'
+    u.admin_role  = true
+end
+
+# Initialize test curator account
+User.create! do |u|
+    u.email        = 'curator@test.com'
+    u.password     = 'password'
+    u.curator_role = true
+end
+
+# Initialize test user account
+User.create! do |u|
+    u.email = 'user@test.com'
+    u.password = 'password'
+    u.user_role = true
+end
+
+
 lists = List.create([ { title: "Feminism", description: "Women's rights are human rights.", price: 25, organization: "UN Women", organization_description: "UN Women is the global champion for gender equality, working to develop and uphold standards and create an environment in which every woman and girl can exercise her human rights and live up to her full potential. We are trusted partners for advocates and decision-makers from all walks of life, and a leader in the effort to achieve gender equality.", organization_url: "http://www.unwomen.org" },
                       { title: "Environmentalism", description: "The Earth is our one and only home.", price: 25, organization: "National Park Foundation", organization_description: "Our national parks are a uniquely American idea, truly supported by all of us. We are inspired by the beauty that surrounds us. We seek the wild and untamed land, the places where history was made, the sites that honor our heroes, and we stand behind what really matters— protecting these sacred places.", organization_url: "https://www.nationalparks.org/" },
                       { title: "Arts & Music", description: "Enrich the lives of inner city youth through music and arts education.", price: 25, organization: "Inner-City Arts", organization_description: "We believe that the arts and creativity are transformational. Inner-City Arts envisions a society that honors the human capacity for creativity, and values its cultivation in the education of young people. Our mission is to engage young people in the creative process in order to shape a society of creative, confident and collaborative individuals.", organization_url: "http://www.inner-cityarts.org/" },
