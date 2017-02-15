@@ -16,6 +16,6 @@
 //= require_tree .
 //= require_toastr
 
-$( document ).ready(function(){
+$(document).ready(function(){
     $(".button-collapse").sideNav();
-})
+});
