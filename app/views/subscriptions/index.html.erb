@@ -4,8 +4,7 @@
     <ul>
         <% @subscription.each do |subscription| %>
             <li>
-                <%= subscription.list.title %>
-                <%= subscription.id %>
+                <h3><%= subscription.list.title %></h3>
                 <%= link_to "Unsubscribe", destroy_subscription_path(subscription.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn right" %>
             </li>
           </br>
