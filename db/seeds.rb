@@ -43,7 +43,7 @@ books = Book.create([ { title: "How to Be A Woman", author: "Caitlin Moran", ima
                       { title: "Walden", author: "Henry David Thoreau", image_url: "http://images.gr-assets.com/books/1465675526l/16902.jpg"},
                       { title: "A Walk in the Woods", author: "Bill Bryson", image_url: "http://images.gr-assets.com/books/1388189974l/9791.jpg"},
                       { title: "How Music Works", author: "David Byrne", image_url: "https://images-na.ssl-images-amazon.com/images/I/41G-eRTz-wL.jpg"},
-                      { title: "Little Bee", author: "Chris Cleave", description: , image_url: "http://images.gr-assets.com/books/1344401905l/6948436.jpg"},
+                      { title: "Little Bee", author: "Chris Cleave", image_url: "http://images.gr-assets.com/books/1344401905l/6948436.jpg"},
                     ]);
 
 selections = Selection.create([ { list_id: 1, book_id: 1},
